@@ -38,19 +38,23 @@ public class MagnaOptionals {
 
         // setup 80% speed decrease while using the curse
         ToolMiningSpeedMultiplierCallback.EVENT.register((tool, state, player, currentMultiplier) -> {
-            if(EnchantmentHelper.getLevel(MagnaOptionals.CURSE_OF_GIGANTISM, tool) > 0) {
+            if(EnchantmentHelper.getLevel(MagnaOptionals.CURSE_OF_GIGANTISM, tool) == 1) {
+                return currentMultiplier * 0.4f;
+            }
+            if(EnchantmentHelper.getLevel(MagnaOptionals.CURSE_OF_GIGANTISM, tool) == 2) {
                 return currentMultiplier * 0.2f;
             }
-
+            if(EnchantmentHelper.getLevel(MagnaOptionals.CURSE_OF_GIGANTISM, tool) > 2) {
+                return currentMultiplier * 0.05f;
+            }
             return currentMultiplier;
         });
 
         // setup radius increase while the curse is applied to a tool
         ToolRadiusCallback.EVENT.register((tool, currentRadius) -> {
             if(EnchantmentHelper.getLevel(MagnaOptionals.CURSE_OF_GIGANTISM, tool) > 0) {
-                return currentRadius + 1;
+                return currentRadius + EnchantmentHelper.getLevel(MagnaOptionals.CURSE_OF_GIGANTISM, tool);
             }
-
             return currentRadius;
         });
 

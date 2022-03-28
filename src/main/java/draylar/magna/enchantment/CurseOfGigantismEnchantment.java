@@ -1,5 +1,6 @@
 package draylar.magna.enchantment;
 
+import draylar.magna.Magna;
 import draylar.magna.api.optional.MagnaOptionals;
 import draylar.magna.api.optional.StackPredicate;
 import draylar.magna.item.ExcavatorItem;
@@ -38,17 +39,17 @@ public class CurseOfGigantismEnchantment extends Enchantment {
 
     @Override
     public int getMinPower(int level) {
-        return 25;
-    }
-
-    @Override
-    public int getMaxPower(int level) {
         return 50;
     }
 
     @Override
+    public int getMaxPower(int level) {
+        return 100;
+    }
+
+    @Override
     public int getMaxLevel() {
-        return 1;
+        return Magna.CONFIG.CurseOfGigantismMaxLevel;
     }
 
     @Override

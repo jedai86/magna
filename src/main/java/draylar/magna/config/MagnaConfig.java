@@ -28,6 +28,9 @@ public class MagnaConfig implements Config {
     @Comment(value = "If true, dropped items are automatically inserted into the inventory.")
     public boolean autoPickup = false;
 
+    @Comment(value = "Maximum level of Curse of Gigantism enchantment")
+    public int CurseOfGigantismMaxLevel = 2;
+
     @Override
     public String getName() {
         return "magna";
