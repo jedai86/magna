@@ -19,6 +19,9 @@
   "icon": "assets/magna/icon.png",
   "environment": "*",
   "entrypoints": {
+    "client": [
+      "draylar.magna.MagnaClient"
+    ],
     "main": [
       "draylar.magna.Magna"
     ]

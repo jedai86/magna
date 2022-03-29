@@ -6,6 +6,7 @@
   "text.autoconfig.magna.option.disableExtendedHitboxWhileSneaking": "Whether extended hitboxes should be disabled when the player is sneaking.",
   "text.autoconfig.magna.option.breakSingleBlockWhenSneaking": "Whether only a single block should be disabled when the player is sneaking.",
   "text.autoconfig.magna.option.individualBlockOutlines": "Whether each block in an extended hitbox should show its outline separately.",
+  "text.autoconfig.magna.option.CurseOfGigantismMaxLevel": "Maximum level of Curse of Gigantism enchantment",
 
   "text.autoconfig.magna.category.default": "General",
   "text.autoconfig.magna.title": "Magna Config",

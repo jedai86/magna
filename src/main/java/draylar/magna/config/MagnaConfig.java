@@ -33,6 +33,12 @@ public class MagnaConfig implements Config {
 
     @Override
     public String getName() {
+        return "Magna";
+    }
+
+    @Override
+    public String getModid() {
         return "magna";
     }
+
 }
